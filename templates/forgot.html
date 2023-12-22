@@ -1,0 +1,157 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+
+    <title>Fantasy Trading Room</title>
+
+</head>
+
+<header>
+    <h1>Fantasy Trading Room</h1>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="/">
+      <img src="{{url_for('static',filename='images/style-new-1.png')}}" alt="Your Logo"
+
+      >
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/exclusive">Exclusive</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/rankings">Rankings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Log In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard">My Account</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<body>
+
+
+
+
+
+
+    <div class="premium-container">
+        <div id="premium-content">
+        </div>
+
+        <div id="login-form">
+            <h3>Forgot Password</h3>
+            <form action="/forgot" method="POST">
+                <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <div class="form-group">
+                
+
+                <button type="submit" class="btn btn-dark">Submit</button>   
+
+
+            </form>
+            
+            
+            
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  <div class="flash-messages">
+      {% with messages = get_flashed_messages() %}
+          {% if messages %}
+              {% for message in messages %}
+                  <div class="alert alert-warning alert-dismissible fade show {{ message.category }}" role="alert">
+                      {{ message }}
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+              {% endfor %}
+          {% endif %}
+      {% endwith %}
+  </div>
+  
+
+
+
+
+
+
+
+    
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+
+</body>
+<footer class="footer">
+  <p>Contact us: fantasytradingroom@email.com</p>
+  <p>Follow our <a href="https://linktr.ee/fantasytradingroom" class="footer-link">socials</a></p>
+  <p><a href="/register" class="footer-link">Sign up here</a> | <a href="/about" class="footer-link">Learn more</a></p>
+</footer>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+
+    <title>About Us</title>
+
+</head>
+<body>
+
+    <header>
+        <h1>Fantasy Trading Room</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="/">
+          <img src="{{url_for('static',filename='images/style-new-1.png')}}" alt="Your Logo"
+    
+          >
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/exclusive">Exclusive</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/rankings">Rankings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Log In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/dashboard">My Account</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+    <section>
+        <h2>About Us</h2>
+        <p>Fantasy Trading Room is your go-to platform for fantasy football success. Our seasoned experts combine expert knowledge with advanced statistical analysis using tools like NumPy and Pandas to provide accurate player rankings and strategic insights. Engage with our informative video content, stay updated with regular newsletters, and gain a competitive edge with timely rankings and strategy updates. Whether you're a seasoned manager or a newcomer, Fantasy Trading Room is dedicated to optimizing your fantasy football experience and helping you secure that coveted championship title. Join us for a winning season!
+
+
+
+
+
+
+        </p>
+    </section>
+
+    <section class="container">
+      <div class="row">
+          <div class="col-lg-6">
+              <h2>Paid Membership</h2>
+              <p>Unlock premium features and benefits with our paid membership:</p>
+
+              <ul>
+                  <li>Everything in our free membership</li>
+                  <li>Advanced rankings past top 5</li>
+                  <li>Rankings tools using data analysis</li>
+                  <li>Priority contact to our experts</li>
+                  <li>Exclusive videos and sleeper rankings</li>
+
+              </ul>
+          </div>
+  
+          <div class="col-lg-6">
+              <h2>Free Membership</h2>
+              <p>Explore the benefits of our free membership:</p>
+              <ul>
+                  <li>Access to basic rankings and videos</li>
+                  <li>Receive weekly reports</li>
+                  <li>Access to top 5 ROS for QB,RB,WR at all times during the season</li>
+              </ul>
+          </div>
+      </div>
+  </section>
+
+    <section>
+        <h2>Our Founders</h2>
+        <div class="founders-container">
+            <div class="founder-card">
+                <img src="{{url_for('static',filename='images/IMG_3524 2.jpg')}}" alt="Founder 1" style="width: 15vw; border-radius: 1vw;">
+                <h4>Steve Bradshaw</h4>
+                <p>Founder</p>
+                <!-- Add additional details about the founder if needed -->
+            </div>
+
+            <div class="founder-card">
+                <img src="{{url_for('static',filename='images/IMG_0747.jpg')}}" alt="Founder 2" style="width: 15vw; border-radius: 1vw;">
+                <h4>Amaan Bakshi</h4>
+                <p>Co-Founder</p>
+                <!-- Add additional details about the founder if needed -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Contact us: fantasytradingroom@email.com</p>
+        <p>Follow our <a href="https://linktr.ee/fantasytradingroom" class="footer-link">socials</a></p>
+        <p><a href="/register" class="footer-link">Sign up here</a> | <a href="/about" class="footer-link">Learn more</a></p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <title>Fantasy Trading Room</title>
+    
+</head>
+<body>
+
+    <header>
+        <h1>Fantasy Trading Room</h1>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <a class="navbar-brand" href="/">
+        <img src="{{url_for('static',filename='images/style-new-1.png')}}" alt="Your Logo"
+  
+        >
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/exclusive">Exclusive</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/rankings">Rankings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Log In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard">My Account</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="section-container2">
+            <div class="article-holder">
+                <div class="element hidden" data-scroll>
+                    <h5>WHAT WE OFFER</h5>
+                    <p>Fantasy Trading Room offers exclusive fantasy football insights with PFF, A22 analysis, and comprehensive data. Join us for a dynamic and informed fantasy experience.
+
+                    </p>
+                  </div>
+      
+            </div>
+        <div class="youtube-holder">
+            <div id="websiteCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="{{url_for('static',filename='images/Data Powered By.png')}}" alt = "Slide 2"
+                    width =100%
+                    height = "125%">
+                </div>
+                  <div class="carousel-item">
+                    <img src="{{url_for('static',filename='images/YT.png')}}" alt="Slide 1"
+                    width =100%
+                    height = "125%">
+                </div>
+                  <div class="carousel-item">
+                    <img src="{{url_for('static',filename='images/Free Articles.png')}}" alt="Slide 3"
+                    width =100%
+                    height = "125%">
+                </div>
+                  <!-- Add more carousel items with embedded websites as needed -->
+                </div>
+                
+                <ol class="carousel-indicators">
+                  <li data-target="#websiteCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#websiteCarousel" data-slide-to="1"></li>
+                  <li data-target="#websiteCarousel" data-slide-to="2"></li>
+                  <!-- Add more indicators as needed based on the number of items -->
+                </ol>
+              </div>
+    
+        </div>
+    
+    
+    </div>
+
+
+
+
+
+
+
+    <div class="section-container">
+      
+          <a href="/article1" class="blog-article2">
+            <img src="{{url_for('static',filename='images/bijanwk13.png')}}" alt="Slide 3">
+            <div class="article-details">
+                  <h3>Week 13 Rankings + Tiers & Bijan Robinson Is Back (Dynasty)
+                  </h3>
+                  <p>Steve Bradshaw</p>
+                  <p>January 1, 2023</p>
+              </div>
+          </a>
+  
+
+            <div class="article-holder">
+                <div class="element hidden" data-scroll>
+                    <h5>CHECK OUT OUR MOST RECENT ARTICLE</h5>
+                    <p>Steve Bradshaw, a seasoned fantasy football writer, has crafted insightful analyses for renowned platforms like Faceoff and Dynasty Nerds. His expertise offers a strategic edge for fantasy enthusiasts. Explore his latest article on the left for valuable insights.
+
+
+
+
+
+                    </p>
+                  </div>
+      
+            </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="section-container2">
+        <div class="article-holder">
+            <div class="element hidden" data-scroll>
+                <h5>CHECK OUT OUR MOST RECENT VIDEO</h5>
+                <p>Steve Bradshaw's daily videos provide valuable insights for a competitive edge in fantasy football. Stay informed and enhance your fantasy experience with his timely updates.
+
+
+
+
+
+                </p>
+              </div>
+  
+        </div>
+        
+
+        <div class="youtube-holder">
+            <!-- Embedded YouTube Video Placeholder -->
+            <!-- Replace the following line with your actual embedded YouTube video code -->
+            <iframe src="https://www.youtube.com/embed/wjBqHO1LVC8" title="Why You Need to BENCH Derrick Henry - Week 14 Top 24 RB/WR Fantasy Football Rankings" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        </div>
+    </div>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+    <script>
+        /*let slideIndex = 1;
+
+        function showSlides(n) {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Initial call to display the first slide
+        showSlides(slideIndex);
+*/
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('[data-scroll]');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.5 }); // Adjust the threshold as needed
+
+    elements.forEach(element => {
+      observer.observe(element);
+    });
+  });
+  
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+        
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <footer class="footer">
+        <p>Contact us: fantasytradingroom@email.com</p>
+        <p>Follow our <a href="https://linktr.ee/fantasytradingroom" class="footer-link">socials</a></p>
+        <p><a href="/register" class="footer-link">Sign up here</a> | <a href="/about" class="footer-link">Learn more</a></p>
+    </footer>
+
+
+
+
+
+
+    
+
+</body>
+</html>

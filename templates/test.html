@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <title>Fantasy Trading Room</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        .section-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .section-container2 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .blog-article {
+            width: 30%;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .blog-article img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .article-details {
+            padding: 10px;
+        }
+
+        .article-details h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #3498db;
+        }
+
+        .article-details p {
+            margin: 5px 0;
+            color: #ecf0f1;
+        }
+
+        .youtube-holder,
+        .article-holder {
+            width: 45%;
+            text-align: center;
+        }
+
+        .youtube-holder iframe {
+            width: 100%;
+            height: 300px; /* Adjust the height as needed */
+        }
+
+        .element.hidden {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .element.visible {
+            opacity: 1;
+        }
+
+        @media screen and (max-width: 768px) {
+            .blog-article {
+                width: 100%;
+            }
+
+            .section-container,
+            .section-container2 {
+                flex-direction: column;
+            }
+
+            .youtube-holder,
+            .article-holder {
+                width: 100%;
+            }
+
+            .youtube-holder iframe {
+                height: 200px; /* Adjust the height as needed for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Your existing HTML content -->
+
+    <div class="section-container">
+        <a href="article1.html" class="blog-article">
+            <img src="{{url_for('static',filename='images/bijanwk13.png')}}" alt="Slide 3">
+            <div class="article-details">
+                <h3>Week 13 Rankings + Tiers & Bijan Robinson Is Back (Dynasty)</h3>
+                <p>Steve Bradshaw</p>
+                <p>January 1, 2023</p>
+            </div>
+        </a>
+
+        <div class="article-holder">
+            <div class="element hidden" data-scroll>
+                <h2>CHECK OUT OUR MOST RECENT ARTICLE</h2>
+                <p>Description goes here...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-container2">
+        <div class="element hidden" data-scroll>
+            <h2>WHAT WE HAVE TO OFFER</h2>
+            <p>Description goes here...</p>
+        </div>
+
+        <div class="youtube-holder">
+            <!-- Embedded YouTube Video Placeholder -->
+            <!-- Replace the following line with your actual embedded YouTube video code -->
+            <iframe src="https://www.youtube.com/embed/wjBqHO1LVC8" title="Why You Need to BENCH Derrick Henry - Week 14 Top 24 RB/WR Fantasy Football Rankings" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Your existing HTML content -->
+
+    <script>
+        // Your existing script
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Your existing script -->
+
+</body>
+</html>

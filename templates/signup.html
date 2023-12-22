@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <title>Fantasy Trading Room</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+    }
+
+    header {
+        background-color: #1f1f1f; /* Dark gray header color */
+        text-align: center;
+        padding: 100px;
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+.navbar {
+  background-color: #333; /* Navbar background color */
+}
+
+.navbar-brand img {
+  max-height: 60px; /* Set the maximum height for your logo */
+  padding-left: 50px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff; /* Navigation link color */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #bbb; /* Hover color for navigation links */
+}
+
+    section {
+        max-width: 80%;
+        margin: auto;
+        padding: 20px;
+        background-color: #2c2c2c; /* Slightly lighter black for section background */
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle lift */
+        margin-bottom: 20px;
+
+    }
+
+    h2 {
+  color: #fff;
+  font-size: 120px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h1 {
+      color: #fff;
+      font-size: 7vw;
+      margin-bottom: 10px;
+      text-align: center;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    }
+
+
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #ccc;
+    }
+
+    
+
+    .premium-container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        background-color: #333; /* Dark gray container background color */
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin-top: 50px;
+    }
+
+    #premium-content {
+        display: none;
+        color: #3498db; /* Blue premium content text color */
+        font-weight: bold;
+    }
+
+    #login-form, #signup-form {
+        margin-top: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        text-align: left;
+        color: #fff; /* White label text color */
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        border: 1px solid #555; /* Dark gray border color */
+        border-radius: 4px;
+        color: #333; /* Dark gray text color */
+        background-color: #fff; /* White background color */
+    }
+
+    button {
+        background-color: #3498db; /* Blue button background color */
+        color: #fff; /* White button text color */
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #2980b9; /* Darker blue on hover */
+    }
+    .section-container {
+        max-width: 80%; /* Adjusted to hold 1280x720 images */
+        max-height:100%;
+        height: 700px;
+
+        margin: auto;
+        padding: 20px;
+        background-color: #333;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin-top: 0px;
+        margin-bottom: 0%;
+
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .section-container2 {
+        max-width: 80%; /* Adjusted to hold 1280x720 images */
+        max-height:100%;
+
+        margin: auto;
+        padding: 20px;
+        background-color: black;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    .article-holder {
+        flex: 1;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: left;
+        border: 20px;
+        margin-bottom: 50px;
+
+        color:white;
+
+
+
+    }
+
+    .youtube-holder {
+        flex: 1;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: left;
+        border: 20px;
+        margin-bottom: 50px;
+
+
+
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%; /* Adjust the height as needed */
+        border: 20px;
+        border-radius: 30px;
+
+
+    }
+    .banner-section {
+        background-color: #333; /* Dark blue banner background color */
+        padding: 20px;
+        text-align: center;
+        color:white
+    }
+    .signup-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #bdc3c7; /* Dark gray button background color */
+        color: #fff; /* White button text color */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+
+
+    .signup-button:hover {
+        background-color: #95a5a6; /* Slightly lighter gray on hover */
+    }
+    .hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.carousel-inner iframe {
+  width: 100%;
+  height: 630px; /* Adjust the height as needed */
+  border-radius:20px;
+}
+.carousel-control-prev, .carousel-control-next {
+
+  display: none; /* Hide the carousel control arrows */
+}
+.carousel-indicators li {
+  background-color: red; /* Change the color to your preference */
+}
+img {
+border-radius: 20px;
+}
+.footer {
+  background-color: #212529; /* Dark background color for the footer */
+  color: #fff; /* Text color for the footer */
+  padding: 20px 0; /* Padding for the footer */
+  text-align: center;
+}
+
+.signup-text {
+  font-size: 40px; /* Font size for the sign-up text */
+  margin-bottom: 20px; /* Bottom margin for spacing */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.button {
+font-size: 40px; /* Font size for the sign-up text */
+margin-bottom: 20px; /* Bottom margin for spacing */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+margin: 4px 4px;
+cursor: pointer;
+}
+
+
+
+
+
+
+.footer {
+            background-color: #212529;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer-link:hover {
+            color: #bbb;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</style>
+    </style>
+</head>
+<header>
+    <h1>Fantasy Trading Room</h1>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="index.html">
+      <img src="style-new-1.png" alt="Your Logo"
+
+      >
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Exclusive</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="rankings.html">Rankings</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="signup.html">Log In/Sign Up</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+
+<body>
+
+
+    <div class="premium-container">
+        <div id="premium-content">
+        </div>
+
+        <div id="login-form">
+            <h3>Login</h3>
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" name="login-username" required>
+
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="login-password" required>
+
+            <button onclick="authenticateUser()">Login</button>
+        </div>
+
+        <div id="signup-form">
+            <h3>Sign Up</h3>
+
+            <label for="signup-username">Username:</label>
+            <input type="text" id="signup-username" name="signup-username" required>
+
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" name="signup-email" required>
+
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" name="signup-password" required>
+
+            <button onclick="signupUser()">Sign Up</button>
+        </div>
+    </div>
+
+
+
+
+
+    <footer class="footer">
+        <p>Contact us: fantasytradingroom@email.com</p>
+        <p>Follow our <a href="https://linktr.ee/fantasytradingroom" class="footer-link">socials</a></p>
+        <p><a href="signup.html" class="footer-link">Sign up here</a> | <a href="about.html" class="footer-link">Learn more</a></p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        
+        function authenticateUser() {
+            const username = document.getElementById("login-username").value;
+            const password = document.getElementById("login-password").value;
+
+            // Simulate authentication (replace with server-side logic)
+            if (username === "demo" && password === "password") {
+                document.getElementById("premium-content").style.display = "block";
+                document.getElementById("login-form").style.display = "none";
+                document.getElementById("signup-form").style.display = "none";
+            } else {
+                alert("Authentication failed. Please check your username and password.");
+            }
+        }
+
+        function signupUser() {
+            const username = document.getElementById("signup-username").value;
+            const email = document.getElementById("signup-email").value;
+            const password = document.getElementById("signup-password").value;
+
+            // Simulate user registration (replace with server-side logic)
+            alert(`User registration successful!\nUsername: ${username}\nEmail: ${email}`);
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+
+</body>
+</html>

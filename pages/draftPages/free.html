@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+
+body {
+    background: #211A1D;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+textarea {
+    resize: none;
+}
+
+.text {
+  color: darkgray;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+
+
+
+
+.header h1 {
+    text-transform: uppercase;
+
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #6320EE;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 10s linear infinite;
+  display: inline-block;
+      font-size: 100px;
+      font-family: Sans-serif
+
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #211A1D	;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  color: darkgray;
+}
+
+
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+/* Style the topnav links */
+.topnav a {
+float:left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 30px 40px;
+  text-decoration: none;
+  font-family: Sans-serif
+
+    
+}
+.topnav b {
+float:left;
+  display: block;
+  color: whitesmoke;
+  background-color: lightblue;
+  text-align: center;
+  padding: 30px 40px;
+  text-decoration: none;
+  font-family: Sans-serif
+
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #211A1D;
+  color: #F8F0FB;
+}
+.topnav b:hover {
+  background-color: #333;
+;
+  color: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 100%;
+  color: #F8F0FB;
+  background-color: #211A1D;
+
+
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 20%;
+  background-color: white;
+  padding-left: 20px;
+  color:#F8F0FB;
+  
+}
+.rrcolumn {
+  float: left;
+  width: 20%;
+  background-color: #211A1D;
+  padding-left: 20px;
+  color:#F8F0FB
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+.vid1 {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: #6320EE;
+  padding: 20px;
+  margin-top: 20px;
+  color:#F8F0FB;
+  border-radius: 25px;
+
+}
+
+
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn,.rrcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Fantasy Trading Room</h1>
+ 
+</div>
+
+<div class="topnav">
+  <a href="#">Home</b>
+  <a href="#">Dynasty</a>
+  <a href="#">2024 Rankings</a>
+  <b href="#">Free Content</b>
+  <a href="#">Pro Advice</a>
+  <a href="#">Film</a>
+  <a style= float:right href="#">Log in/Create an Account</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <h1>Check out our recent videos and articles!</h1>
+
+    <div class="card">
+      <h3>The Future of FantasyTradingRoom</h3>
+      <iframe width="100%" height="400" src="https://www.youtube.com/embed/_pckyj-5vKA" title="The Future of Fantasy Football: Faceoff Sports Network X The Fantasy Trading Room" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"frameborder="0" allowfullscreen></iframe>
+      <p>Steve Bradshaw is now a key writer at Faceoff Sports Network, where he'll share his sports insights and passion. His engaging articles will enhance the sports experience for readers, showcasing the network's commitment to top-tier content.
+      
+      
+      </p>
+      </div>
+      <div class="card">
+      <h3>2023 Dynasty Fantasy Football Startup Draft </h3>
+      <iframe width="100%" height="400" src="https://www.youtube.com/embed/1GwXsXmxIpY" title="Dynasty startup draft" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"frameborder="0" allowfullscreen></iframe>
+      <p> Join us for an in-depth analysis of the 2023 Dynasty Fantasy Football Startup Draft. In this video, we break down the latest draft picks, strategies, and player insights to help you stay ahead in your dynasty league. Get ready to make informed decisions and build a winning team for years to come!
+      
+      
+      
+      
+      
+      
+      
+      
+      </p>
+      </div>
+      <div class="card">
+      <h3>TOP 10 DYNASTY FOOTBALL TAKEAWAYS FROM WEEK 7
+      </h3>
+      <iframe width="100%" height="400" src="https://www.dynastynerds.com/top-10-dynasty-football-takeaways-from-week-7/" title="Dynasty startup draft" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"frameborder="0" allowfullscreen></iframe>
+      <p> Steve Bradshaw's "10 Dynasty Takeaways from Week 7" provides a concise overview of the most important developments in the NFL during the seventh week of the season. This article is a valuable resource for dynasty fantasy football managers seeking insights into player values and long-term strategies to stay competitive in their leagues.
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      </p>
+      </div>
+      
+      
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+</body>
+
+
+
+
+

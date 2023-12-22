@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <title>Rankings</title>
+        
+</head>
+
+
+
+
+<header>
+    <h1>Fantasy Trading Room</h1>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="/">
+      <img src="{{url_for('static',filename='images/style-new-1.png')}}" alt="Your Logo"
+
+      >
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/exclusive">Exclusive</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/rankings">Rankings</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/login">Log In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard">My Account</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="rankings-list">
+                <h2>PPR RB ROS</h2>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Player</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Christian McCaffrey</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Kyren Williams </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Jahmyr Gibbs</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Travis Etienne Jr.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Bijan Robinson
+                                </td>
+                            </tr>
+                            
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="rankings-list">
+                <h2>PPR WR ROS</h2>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Player</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Tyreek Hill</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>CeeDee Lamb</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>A.J Brown</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Amon-Ra St. Brown</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Justin Jefferson</td>
+                            </tr>
+                         
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="rankings-list">
+                <h2>PPR QB ROS</h2>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Player</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Josh Allen</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jalen Hurts</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Lamar Jackson</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Dak Prescott</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Patrick Mahomes</td>
+                            </tr>
+            
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <p>Contact us: fantasytradingroom@email.com</p>
+    <p>Follow our <a href="https://linktr.ee/fantasytradingroom" class="footer-link">socials</a></p>
+    <p><a href="/register" class="footer-link">Sign up here</a> | <a href="/about" class="footer-link">Learn more</a></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
