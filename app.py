@@ -10,7 +10,7 @@ pymysql.install_as_MySQLdb()
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://sql3672369:F5Gxn5CUcf@sql3.freemysqlhosting.net:3306/sql3672369'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
